@@ -7,17 +7,17 @@ public class Contador {
     int Contador;
     Scanner sc = new Scanner(System.in);
     Scanner sl = new Scanner(System.in);
-    public static void main(String[] args){
-    Contador Inicio = new Contador(0);
-    }    
+
     //Constructor con parametro
     public Contador(int Contador){
         this.Contador = Contador;
-        IngresarOpcion();
     }
     //Constructor vacio
     public Contador(){}
-
+    //Constructor copia
+    public Contador(Contador Cont){
+        this.Contador = Cont.getContador();
+    }
     public int getContador() {
         return Contador;
     }
